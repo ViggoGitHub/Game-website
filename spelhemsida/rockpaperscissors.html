@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sten Sax Påse</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+    
+        <h1>Spelhemsida</h1>
+        <ul>
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="rockpaperscissors.html">Sten Sax Påse</a></li>
+            <li><a href="connectfour.html">Fyra I Rad</a></li>
+        </ul>
+        <h2 class="h2">Sten Sax Påse</h2>
+            
+        <p class="game-info">
+            Välkommen till Sten Sax Påse. Spelet där du kommer att 
+            få spela Sten Sax Påse mot datorn. Reglerna är enkla, sten 
+            vinner över sax, sax vinner över påse och påse vinner över sten. 
+        </p>
+
+        <h2>Datorns val: <span id="computer-choice"></span></h2>
+        <h2>Spelarens val: <span id="player-choice"></span></h2>
+        <h2>Resultat: <span id="result"></span></h2>
+
+        <button type="button" onclick="rock();">Sten</button>
+        <button type="button" onclick="scissors();">Sax</button>
+        <button type="button" onclick="paper();">Påse</button>
+
+        <h2>Datorn poäng: <span id="computer-point">0</span></h2>
+        <h2>Din poäng: <span id="player-point">0</span></h2>
+    </div>
+
+    <script src="rockpaperscissors.js" type="text/javascript"></script>
+</body>
+</html>
