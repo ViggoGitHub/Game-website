@@ -4,6 +4,7 @@ let playerChoiceDisplay = document.getElementById("player-choice");
 let resultDisplay = document.getElementById("result");
 let computerPointDisplay = document.getElementById("computer-point");
 let playerPointDisplay = document.getElementById("player-point");
+let rounds = document.getElementById("getRounds");
 let computerChoice;
 let playerChoice;
 let result;
@@ -30,6 +31,7 @@ function paper(){
     generateComputerChoice();
     getResult();
 }
+
 
 function generateComputerChoice(){
     let randomNumber = Math.floor(Math.random() * 3) + 1;
