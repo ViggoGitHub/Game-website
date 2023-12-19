@@ -122,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Du kan tyvärr inte placera där!")
             }
             winner();
-            
         }
     }
 
