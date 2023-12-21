@@ -4,6 +4,11 @@ let playerChoiceDisplay = document.getElementById("player-choice");
 let resultDisplay = document.getElementById("result");
 let computerPointDisplay = document.getElementById("computer-point");
 let playerPointDisplay = document.getElementById("player-point");
+
+let rounds = document.getElementById("getRounds").value;
+// let roundsdisplay = document.getElementById("roundDisplay");
+let numberOfRounds = document.getElementById("numberOfRounds");
+
 let computerChoice;
 let playerChoice;
 let result;
@@ -44,10 +49,14 @@ function generateComputerChoice(){
 }
 
 function getResult(){
-    if (playerChoice === "Sten" && computerChoice === "Sax" || playerChoice === "Sax" && computerChoice === "Påse" || playerChoice === "Påse" && computerChoice === "Sten"){
+    if (playerChoice === "Sten" && computerChoice === "Sax" || 
+        playerChoice === "Sax" && computerChoice === "Påse" || 
+        playerChoice === "Påse" && computerChoice === "Sten"){
         result = "Du vann!";
         playerPoint += 1;
-    } else if (playerChoice === "Sax" && computerChoice === "Sten" || playerChoice === "Sten" && computerChoice === "Påse" || playerChoice === "Påse" && computerChoice === "Sax"){
+    } else if (playerChoice === "Sax" && computerChoice === "Sten" || 
+        playerChoice === "Sten" && computerChoice === "Påse" || 
+        playerChoice === "Påse" && computerChoice === "Sax"){
         result = "Datorn vann!";
         computerPoint += 1;
     } else {
@@ -59,8 +68,22 @@ function getResult(){
     playerPointDisplay.innerHTML = playerPoint;
 }
 
+function getWinner(){
+    if (playerPoint === rounds){
+        roundsdisplay.innerHTML = "Du vann!";
+    } else if (computerPoint === rounds){
+        roundsdisplay.innerHTML = "Datorn vann!";
+    }
+}
+
+function roundsAmount(){
+    numberOfRounds.innerHTML = rounds;
+}
+
 function getFunctions(){
     generateComputerChoice();
     getResult();
     getWinner();
+    roundsAmount();
+    roundsAmount();
 }
