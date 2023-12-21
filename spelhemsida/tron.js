@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function (){
 
 
-    let playerX = 0;
-    let playerY = 0;
-    let playerDirection = "right";
+    // let playerX = 0;
+    // let playerY = 0;
+    // let playerDirection = "right";
 
 
-    function updatePlayer() {
-        player.style.left = playerX + "px";
-        player.style.top = playerY + "px";
-    } 
+    // function updatePlayer() {
+    //     player.style.left = playerX + "px";
+    //     player.style.top = playerY + "px";
+    // } 
 
     // function movePlayer() {
     //     switch(playerDirection){
@@ -36,24 +36,24 @@ document.addEventListener("DOMContentLoaded", function (){
     //         playerY += 5;
     //     }
 
-        // switch(event.key){
-        //     case "ArrorRight":
-        //         playerDirection = "right";
-        //         break;
-        //     case "ArrorLeft":
-        //         playerDirection = "left";
-        //         break;
-        //     case "ArrorUp":
-        //         playerDirection = "up";
-        //         break;
-        //     case "ArrorDown":
-        //         playerDirection = "down";
-        //         break;
-        // }
-    }
+    //     switch(event.key){
+    //         case "ArrorRight":
+    //             playerDirection = "right";
+    //             break;
+    //         case "ArrorLeft":
+    //             playerDirection = "left";
+    //             break;
+    //         case "ArrorUp":
+    //             playerDirection = "up";
+    //             break;
+    //         case "ArrorDown":
+    //             playerDirection = "down";
+    //             break;
+    //     }
+    // }
 
-    // Event listener for keyboard input
-    document.addEventListener("keydown", pressedKey);
+    // // Event listener for keyboard input
+    // document.addEventListener("keydown", pressedKey);
 
 
 })

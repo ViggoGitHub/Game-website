@@ -4,7 +4,6 @@ let playerChoiceDisplay = document.getElementById("player-choice");
 let resultDisplay = document.getElementById("result");
 let computerPointDisplay = document.getElementById("computer-point");
 let playerPointDisplay = document.getElementById("player-point");
-let rounds = document.getElementById("getRounds");
 let computerChoice;
 let playerChoice;
 let result;
@@ -14,22 +13,19 @@ let playerPoint = 0;
 function rock(){
     playerChoice = "Sten";
     playerChoiceDisplay.innerHTML = playerChoice;
-    generateComputerChoice();
-    getResult();
+    getFunctions();
 }
 
 function scissors(){
     playerChoice = "Sax";
     playerChoiceDisplay.innerHTML = playerChoice;
-    generateComputerChoice();
-    getResult();
+    getFunctions();
 }
 
 function paper(){
     playerChoice = "Påse";
     playerChoiceDisplay.innerHTML = playerChoice;
-    generateComputerChoice();
-    getResult();
+    getFunctions();
 }
 
 
@@ -61,4 +57,10 @@ function getResult(){
     resultDisplay.innerHTML = result;
     computerPointDisplay.innerHTML = computerPoint;
     playerPointDisplay.innerHTML = playerPoint;
+}
+
+function getFunctions(){
+    generateComputerChoice();
+    getResult();
+    getWinner();
 }
