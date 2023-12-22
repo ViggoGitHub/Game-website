@@ -82,17 +82,4 @@ li:hover a{
     border-radius: 30px;
 }
 
-#gamefield{
-    background-color: black;
-    height: 500px;
-    width: 700px;
-    border: 1px solid;
-}
 
-#player{
-    margin: 230px 20px;
-    width: 10px;
-    height: 10px;
-    background-color: green;
-    position: absolute;
-}
