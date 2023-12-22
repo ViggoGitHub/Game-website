@@ -4,11 +4,10 @@ let playerChoiceDisplay = document.getElementById("player-choice");
 let resultDisplay = document.getElementById("result");
 let computerPointDisplay = document.getElementById("computer-point");
 let playerPointDisplay = document.getElementById("player-point");
-
-let rounds = document.getElementById("getRounds").value;
-// let roundsdisplay = document.getElementById("roundDisplay");
+let roundsdisplay = document.getElementById("roundDisplay");
 let numberOfRounds = document.getElementById("numberOfRounds");
 
+let rounds;
 let computerChoice;
 let playerChoice;
 let result;
@@ -68,6 +67,13 @@ function getResult(){
     playerPointDisplay.innerHTML = playerPoint;
 }
 
+document.getElementById("roundsForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    rounds = document.getElementById("getRounds").value;
+    rounds = parseInt(rounds);
+    numberOfRounds.innerHTML = rounds;
+});
+
 function getWinner(){
     if (playerPoint === rounds){
         roundsdisplay.innerHTML = "Du vann!";
@@ -76,14 +82,8 @@ function getWinner(){
     }
 }
 
-function roundsAmount(){
-    numberOfRounds.innerHTML = rounds;
-}
-
 function getFunctions(){
     generateComputerChoice();
     getResult();
     getWinner();
-    roundsAmount();
-    roundsAmount();
 }
