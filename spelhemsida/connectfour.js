@@ -107,16 +107,24 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 0; i < squares.length; i++){
         squares[i].onclick = () => {
             if (squares[i+7].classList.contains("taken")){
-                if (currentPlayer == 1){
-                    squares[i].classList.add("player-one");
-                    squares[i].classList.add("taken"); 
-                    currentPlayer = 2;
-                    currentPlayerDisplay.innerHTML = currentPlayer;
-                }else if (currentPlayer == 2){
-                    squares[i].classList.add("player-two");
-                    squares[i].classList.add("taken");
-                    currentPlayer = 1;
-                    currentPlayerDisplay.innerHTML = currentPlayer;
+                if (currentPlayer == 1) {
+                    if (squares[i].classList.contains("taken")) {
+                        alert("Du kan tyvärr inte placera där!")
+                    } else {
+                        squares[i].classList.add("player-one");
+                        squares[i].classList.add("taken"); 
+                        currentPlayer = 2;
+                        currentPlayerDisplay.innerHTML = currentPlayer;
+                    }
+                } else if (currentPlayer == 2) {
+                    if (squares[i].classList.contains("taken")) {
+                        alert("Du kan tyvärr inte placera där!")
+                    } else {
+                        squares[i].classList.add("player-two");
+                        squares[i].classList.add("taken");
+                        currentPlayer = 1;
+                        currentPlayerDisplay.innerHTML = currentPlayer;
+                    }
                 }
             }else{
                 alert("Du kan tyvärr inte placera där!")
