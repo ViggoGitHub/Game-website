@@ -14,23 +14,22 @@ let result;
 let computerPoint = 0;
 let playerPoint = 0;
 
-function rock(){
-    playerChoice = "Sten";
-    playerChoiceDisplay.innerHTML = playerChoice;
-    getFunctions();
+function choiceClick(num) {
+    if (num === 1) {
+        playerChoice = "Sten";
+        playerChoiceDisplay.innerHTML = playerChoice;
+        getFunctions();
+    } else if (num === 2) {
+        playerChoice = "Sax";
+        playerChoiceDisplay.innerHTML = playerChoice;
+        getFunctions();
+    } else {
+        playerChoice = "Påse";
+        playerChoiceDisplay.innerHTML = playerChoice;
+        getFunctions();
+    }
 }
 
-function scissors(){
-    playerChoice = "Sax";
-    playerChoiceDisplay.innerHTML = playerChoice;
-    getFunctions();
-}
-
-function paper(){
-    playerChoice = "Påse";
-    playerChoiceDisplay.innerHTML = playerChoice;
-    getFunctions();
-}
 
 
 function generateComputerChoice(){
