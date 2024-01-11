@@ -133,4 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function update(){
+        location.reload();
+    }
+
 })
