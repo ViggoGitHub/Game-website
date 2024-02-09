@@ -69,9 +69,26 @@ li:hover a{
    flex-wrap: wrap;
 }
 
+.molegrid{
+    border: 1px solid;
+    height: 450px;
+    width: 450px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .grid div{
     height: 60px;
     width: 60px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.molegrid div{
+    border: 1px solid;
+    height: 150px;
+    width: 150px;
     margin: 0;
     box-sizing: border-box;
 }
