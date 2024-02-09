@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let squares = document.querySelectorAll(".grid div");
     let result = document.querySelector("#result");
     let currentPlayerDisplay = document.querySelector("#current-player");
-    let currentPlayer = 1
+    let currentPlayer = 1;
 
     const winningArrays = [
         [0, 1, 2, 3],
@@ -132,5 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
             winner();
         }
     }
-
 })
+
+function update() {
+    location.reload();
+}
+

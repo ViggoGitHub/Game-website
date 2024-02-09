@@ -84,3 +84,8 @@ function getFunctions(){
     getResult();
     getWinner();
 }
+
+function update() {
+    location.reload();
+}
+
