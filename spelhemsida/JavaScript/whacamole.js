@@ -22,6 +22,15 @@ function moveMole(){
     timerId = setInterval(randomSquare, 500)
 }
 
+for (let i = 0; i < squares.length; i++){
+    squares[i].onclick = () => {
+        if (squares[i].classList.contains("mole")){
+            result += 1;
+            score.innerHTML = result;
+        }
+    }
+}
+
 function update() {
     location.reload();
 }
