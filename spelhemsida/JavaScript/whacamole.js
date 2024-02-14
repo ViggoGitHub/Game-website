@@ -4,6 +4,9 @@ const timeLeft = document.querySelector("#time-left");
 const score = document.querySelector("#score");
 
 let result = 0;
+let hitPosition;
+let currentTime = 10;
+let timerId = null;
 
 function randomSquare(){
     squares.forEach(square => {
@@ -28,14 +31,25 @@ squares.forEach(square => {
 
 // function that changes the position of the mole after a specific interval
 function moveMole(){
-    let timerId = null;
-    timerId = setInterval(randomSquare, 500)
+    timerId = setInterval(randomSquare, 1000)
 }
 
+function countDown(){
+    currentTime --;
+    timeLeft.innerHTML = currentTime;
+
+    if (currentTime == 0){
+        clearInterval(countDowntimerId);
+        clearInterval(timerId);
+        alert("GAME OVER! Du fick " + result + " poäng")
     }
 }
 
 // makes the countDowns function execute every 1000 millisecond
+let countDowntimerId = setInterval(countDown, 1000);
+
+moveMole();
+
 function update() {
     location.reload();
 }
