@@ -78,6 +78,15 @@ li:hover a{
     flex-wrap: wrap;
 }
 
+.tictactoegrid{
+    border: 1px solid;
+    height: 240px;
+    width: 240px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .grid div{
     height: 60px;
     width: 60px;
@@ -93,6 +102,13 @@ li:hover a{
     box-sizing: border-box;
 }
 
+.tictactoegrid div{
+    border: 1px solid;
+    height: 80px;
+    width: 80px;
+    box-sizing: border-box;
+}
+
 .player-one{
     background-color: blue;
     border-radius: 30px;
@@ -105,4 +121,13 @@ li:hover a{
 
 .mole{
     background-color: brown;
+}
+
+.x{
+    background-color: black;
+}
+
+.o{
+    background-color: white;
+    border-radius: 40px;
 }
