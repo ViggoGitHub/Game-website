@@ -40,13 +40,24 @@ function winner() {
 for (let i = 0; i < squares.length; i++){
     squares[i].onclick = () => {
         if (currentPlayer == 1) {
-            squares[i].classList.add("x");
-            currentPlayer = 2;
-            currentPlayerDisplay.innerHTML = currentPlayer;
+            if (squares[i].classList.contains("x") ||
+                squares[i].classList.contains("o")) {
+                alert("Denna ruta är upptagen! Placera på wn annan ruta.");
+            } else {
+                squares[i].classList.add("x");
+                currentPlayer = 2;
+                currentPlayerDisplay.innerHTML = currentPlayer;
+            }
         } else if (currentPlayer == 2) {
-            squares[i].classList.add("o")
-            currentPlayer = 1;
-            currentPlayerDisplay.innerHTML = currentPlayer;
+            if (squares[i].classList.contains("x") ||
+                squares[i].classList.contains("o")) {
+                alert("Denna ruta är upptagen! Placera på wn annan ruta.");
+            } else {
+                squares[i].classList.add("o")
+                currentPlayer = 1;
+                currentPlayerDisplay.innerHTML = currentPlayer;
+            }
+            
         }
         winner();
     }
